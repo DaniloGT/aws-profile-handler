@@ -101,7 +101,7 @@ class awsProfileHandler {
             throw new Error('Invalid Input: credentials cannot be omitted nor empty.');
         }
 
-        if (Object.keys(credentials).length !== 2 ||
+        if (Object.keys(credentials).length < 2 ||
             !this.isValidSchema(credentials) &&
             !this.isValidAltSchema(credentials)) {
             throw new Error('Invalid input: credentials schema is invalid.');
